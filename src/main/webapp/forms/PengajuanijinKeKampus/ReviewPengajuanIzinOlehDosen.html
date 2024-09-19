@@ -1,0 +1,46 @@
+<form class="form-horizontal" role="form" name="izinApprovalForm" id="izinApprovalForm">
+    <!-- Semua field di "Mahasiswa Mengajukan Izin" (Readonly / Disabled) -->
+    <h3>Mahasiswa Mengajukan Izin</h3>
+    <!-- Jenis Izin (Select Option) -->
+    <div class="form-group">
+        <label for="category">Jenis Izin</label>
+        <select class="form-control" id="category" cam-variable-name="category" cam-variable-type="String" readonly>
+            <option value="personal">Keperluan Pribadi</option>
+            <option value="sick">Sakit</option>
+            <option value="other">Lainnya</option>
+        </select>
+    </div>
+
+    <!-- Tanggal Izin (Date Picker) -->
+    <div class="form-group">
+        <label for="date">Tanggal Izin</label>
+        <input type="date" class="form-control" id="date" cam-variable-name="date" cam-variable-type="String" readonly>
+    </div>
+
+    <!-- Deskripsi (Textarea) -->
+    <div class="form-group">
+        <label for="description">Deskripsi</label>
+        <textarea class="form-control" id="description" cam-variable-name="description" cam-variable-type="String" readonly></textarea>
+    </div>
+
+    <!-- Bukti Pendukung (File Input) -->
+    <div class="form-group">
+        <label>Bukti Pendukung (Opsional)</label>
+        <a cam-file-download="evidence"></a>
+    </div>
+
+    <!-- Apakah Pengajuan Izin Disetujui? (Select Option) -->
+    <div class="form-group">
+        <label for="isApproved">Apakah pengajuan Izin disetujui?</label>
+        <select class="form-control" id="isApproved" cam-variable-name="isApproved" cam-variable-type="String">
+            <option value="true">Setuju</option>
+            <option value="false">Tolak</option>
+        </select>
+    </div>
+
+    <!-- Catatan (Textarea) -->
+    <div class="form-group">
+        <label for="reason">Catatan</label>
+        <textarea class="form-control" id="reason" cam-variable-name="reason" cam-variable-type="String"></textarea>
+    </div>
+</form>

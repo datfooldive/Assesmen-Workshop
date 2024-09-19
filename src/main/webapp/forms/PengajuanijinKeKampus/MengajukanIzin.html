@@ -1,0 +1,38 @@
+<html lang="en">
+<form class="form-horizontal" role="form" name="izinForm" id="izinForm">
+    <!-- Jenis Izin (Select Option) -->
+    <div class="form-group">
+        <label for="category">Jenis Izin</label>
+        <select class="form-control" id="category" cam-variable-name="category" cam-variable-type="String">
+            <option value="personal">Keperluan Pribadi</option>
+            <option value="sick">Sakit</option>
+            <option value="other">Lainnya</option>
+        </select>
+    </div>
+
+    <!-- Tanggal Izin (Date Picker) -->
+    <div class="form-group">
+        <label for="date">Tanggal Izin</label>
+        <input type="date" class="form-control" id="date" cam-variable-name="date" cam-variable-type="String">
+    </div>
+
+    <!-- Deskripsi (Textarea) -->
+    <div class="form-group">
+        <label for="description">Deskripsi</label>
+        <textarea class="form-control" id="description" cam-variable-name="description" cam-variable-type="String"></textarea>
+    </div>
+
+    <!-- Bukti Pendukung (File Input) -->
+    <div class="form-group">
+        <label for="evidence">Bukti Pendukung (Opsional)</label>
+        <input type="file" class="form-control" id="evidence" cam-variable-name="evidence" cam-variable-type="File">
+    </div>
+</form>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set today's date as the minimum date for the date picker
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+    });
+</script>
+</html>
